@@ -14,7 +14,7 @@ export default function Header({ currentPage }: HeaderProps) {
             <Sun className="w-8 h-8 sm:w-10 sm:h-10 text-green-700" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold">
-            Escuela Rural "La Paloma"
+            Escuela Rural La Paloma
           </h1>
         </div>
         <nav className="w-full sm:w-auto">

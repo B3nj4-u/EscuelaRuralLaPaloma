@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
         <div className="mt-4 text-center">
           <p className="text-[8px] text-green-600 opacity-30 hover:opacity-100 transition-opacity duration-300">
-            Creado por Pedro Ulloa, Ingeniero Civil Informático en Escuela Rural La Paloma
+            Creado por Pedro Ulloa, Ingeniero Civil Inform&aacute;tico en Escuela Rural La Paloma
           </p>
         </div>
       </div>

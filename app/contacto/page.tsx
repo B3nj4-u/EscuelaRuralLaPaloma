@@ -41,8 +41,8 @@ export default function Contacto() {
         <section className="container mx-auto px-4 py-8 sm:py-12">
           <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl mb-6 text-center leading-relaxed">
-              Estamos aquí para responder a todas tus preguntas. No dudes en
-              ponerte en contacto con nosotros para obtener más información
+              Estamos aqu&iacute; para responder a todas tus preguntas. No dudes en
+              ponerte en contacto con nosotros para obtener m&aacute;s informaci&oacute;n
               sobre nuestra escuela o para programar una visita.
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Contacto() {
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <MapPin className="w-6 h-6 mr-2 text-green-600" />
-                    <span>Pasaje Ricardo García, Puerto Montt, Los Lagos</span>
+                    <span>Pasaje Ricardo Garc&iacute;a, Puerto Montt, Los Lagos</span>
                   </li>
                   <li className="flex items-center">
                     <Phone className="w-6 h-6 mr-2 text-green-600" />
@@ -72,7 +72,7 @@ export default function Contacto() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-2xl font-semibold mb-4">
-                  Envíanos un Mensaje
+                  Env&iacute;anos un Mensaje
                 </h3>
                 <form>
                   <div className="mb-4">
@@ -136,7 +136,7 @@ export default function Contacto() {
 
         <section className="container mx-auto px-4 py-8 sm:py-12">
           <h3 className="text-2xl sm:text-3xl font-semibold text-green-800 mb-6 text-center">
-            Ubicación
+            Ubicaci&oacute;n
           </h3>
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="aspect-w-16 aspect-h-9">

@@ -42,29 +42,29 @@ export default function Nosotros() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
               La Escuela Rural La Paloma, situada en Puerto Montt, fue fundada
-              el 24 de mayo de 1959 en el sector Alto La Paloma, específicamente
-              en la calle Ricardo García S/N. En sus inicios, contaba con 90
+              el 24 de mayo de 1959 en el sector Alto La Paloma, espec&iacute;ficamente
+              en la calle Ricardo Garc&iacute;a S/N. En sus inicios, contaba con 90
               alumnos y un equipo educativo compuesto por una directora, ocho
-              profesores, un profesor de educación diferencial, una asistente
-              social, una psicóloga, un técnico en párvulos, un técnico en
-              computación, así como dos auxiliares y dos manipuladoras de
+              profesores, un profesor de educaci&oacute;n diferencial, una asistente
+              social, una psic&oacute;loga, un t&eacute;cnico en p&aacute;rvulos, un t&eacute;cnico en
+              computaci&oacute;n, as&iacute; como dos auxiliares y dos manipuladoras de
               alimentos.
             </p>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
-              En 2009, se implementó la Jornada Escolar Completa (JEC) para la
-              educación básica, y en 2014 se estableció el Proyecto de
-              Integración Escolar (PIE). En la actualidad, la Escuela Rural La
+              En 2009, se implement&oacute; la Jornada Escolar Completa (JEC) para la
+              educaci&oacute;n b&aacute;sica, y en 2014 se estableci&oacute; el Proyecto de
+              Integraci&oacute;n Escolar (PIE). En la actualidad, la Escuela Rural La
               Paloma atiende a alrededor de 104 estudiantes, distribuidos en 10
-              cursos que abarcan desde Pre-Kínder hasta Octavo año básico. Los
-              cursos se organizan en combinaciones: Pre-Kínder-Kínder, 1º-2º,
+              cursos que abarcan desde Pre-K&iacute;nder hasta Octavo año b&aacute;sico. Los
+              cursos se organizan en combinaciones: Pre-K&iacute;nder-K&iacute;nder, 1º-2º,
               3º-4º y 5º-6º.
             </p>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
-              Desde 2017, el Proyecto de Integración Escolar (PIE) cuenta con un
+              Desde 2017, el Proyecto de Integraci&oacute;n Escolar (PIE) cuenta con un
               equipo multidisciplinario que incluye a profesionales y
               asistentes, tales como Educadora Diferencial, Psicopedagoga,
-              Psicóloga, Fonoaudióloga y Terapeuta Ocupacional, enriqueciendo
-              así la atención y el desarrollo integral de nuestros alumnos.
+              Psic&oacute;loga, Fonoaudi&oacute;loga y Terapeuta Ocupacional, enriqueciendo
+              as&iacute; la atenci&oacute;n y el desarrollo integral de nuestros alumnos.
             </p>
           </div>
         </section>
