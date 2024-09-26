@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { Sun, Cloud, Users, GraduationCap, Heart, Leaf, Book, Smile } from "lucide-react"
+import { Cloud, Users, GraduationCap, Heart, Leaf, Book, Smile } from "lucide-react"
 import { Architects_Daughter } from "next/font/google"
 import Header from "../components/Header"
 import Footer from "../components/Footer"

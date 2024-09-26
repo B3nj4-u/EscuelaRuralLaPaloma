@@ -41,7 +41,7 @@ export default function Actividades() {
         <section className="container mx-auto px-4 py-8 sm:py-12">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
-              En la Escuela Rural "La Paloma", creemos en un aprendizaje
+              En la Escuela Rural La Paloma, creemos en un aprendizaje
               integral que va más allá del aula. Nuestras actividades están
               diseñadas para fomentar la curiosidad, la creatividad y el amor
               por la naturaleza en nuestros estudiantes.

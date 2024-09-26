@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Sun, Cloud, MapPin, Phone, Mail } from "lucide-react";
+import { Cloud, MapPin, Phone, Mail } from "lucide-react";
 import { Architects_Daughter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";

@@ -90,7 +90,7 @@ export default function Home() {
             Nuestra Escuela
           </h2>
           <p className="text-lg sm:text-xl mb-8 sm:mb-12 max-w-3xl mx-auto text-center leading-relaxed">
-            En la Escuela Rural "La Paloma", creemos en el poder de la educación
+            En la Escuela Rural La Paloma, creemos en el poder de la educación
             para transformar vidas. Rodeados de naturaleza y con un equipo
             docente comprometido, nuestros alumnos crecen, aprenden y se
             desarrollan en un ambiente acogedor y familiar.

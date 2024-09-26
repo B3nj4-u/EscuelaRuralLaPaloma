@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="mb-4 sm:mb-0 text-center sm:text-left">
             <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-              Escuela Rural "La Paloma"
+              Escuela Rural La Paloma
             </h3>
             <p className="text-yellow-300 text-sm sm:text-base">
               Educación con amor en el corazón del campo
