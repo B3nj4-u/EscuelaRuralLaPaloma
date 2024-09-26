@@ -1,101 +1,228 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { Book, Users, Calendar, Cloud } from "lucide-react";
+import { Architects_Daughter } from "next/font/google";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Carousel from "./components/Carousel";
+import Head from "next/head";
+
+const architectsDaughter = Architects_Daughter({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isCarouselVisible, setIsCarouselVisible] = useState(false);
+  const [images, setImages] = useState<string[]>([]);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  const handleCardClick = (type: string) => {
+    const newImages =
+      type === "Aulas"
+        ? Array.from({ length: 5 }, (_, i) => `/images/Aulas${i + 1}.jpg`)
+        : Array.from({ length: 4 }, (_, i) => `/images/Areas${i + 1}.jpg`);
+
+    setImages(newImages);
+    setIsCarouselVisible(true);
+  };
+  return (
+    <div className="min-h-screen bg-cream-paper text-green-900 font-handwritten">
+      <Head>
+        <title>Escuela Rural La Paloma</title>
+        <meta name="description" content="Sitio web informativo de Escuela Rural La Paloma" />
+        <link rel="icon" href="/favicon.ico" />{" "}
+        {/* Asegúrate de que la ruta sea correcta */}
+      </Head>
+      <Header currentPage="inicio" />
+      <main>
+        <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
+          <Image
+            src="/images/banner.png"
+            alt="Escuela Rural La Paloma"
+            layout="fill"
+            objectFit="cover"
+            className="brightness-110"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-between">
+            <div className="w-full flex justify-between items-start p-4 sm:p-6 md:p-8">
+              <div className="flex space-x-4">
+                <Cloud className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 text-white animate-bounce" />
+                <Cloud className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white animate-bounce delay-150" />
+              </div>
+            </div>
+
+            <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+              <h2
+                className={`${architectsDaughter.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight shadow-text`}
+              >
+                Bienvenidos a nuestra
+              </h2>
+              <h2
+                className={`${architectsDaughter.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight shadow-text mt-2`}
+              >
+                Escuela Rural La Paloma
+              </h2>
+            </div>
+
+            <svg
+              viewBox="0 0 1440 320"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute bottom-0 w-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M0 320L48 304C96 288 192 256 288 229.3C384 203 480 181 576 181.3C672 181 768 203 864 213.3C960 224 1056 224 1152 213.3C1248 203 1344 181 1392 170.7L1440 160V320H1392C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320H0Z"
+                fill="rgba(34, 197, 94, 0.8)"
+              />
+              <path
+                d="M0 320L48 304C96 288 192 256 288 245.3C384 235 480 245 576 240C672 235 768 213 864 218.7C960 224 1056 256 1152 261.3C1248 267 1344 245 1392 234.7L1440 224V320H1392C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320H0Z"
+                fill="rgba(34, 197, 94, 0.6)"
+              />
+            </svg>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-4 py-8 sm:py-12">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-green-800 mb-6 sm:mb-8 text-center">
+            Nuestra Escuela
+          </h2>
+          <p className="text-lg sm:text-xl mb-8 sm:mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+            En la Escuela Rural "La Paloma", creemos en el poder de la educación
+            para transformar vidas. Rodeados de naturaleza y con un equipo
+            docente comprometido, nuestros alumnos crecen, aprenden y se
+            desarrollan en un ambiente acogedor y familiar.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              {
+                icon: Book,
+                title: "Aprendizaje Integral",
+                desc: "Combinamos el currículo con experiencias prácticas en la naturaleza.",
+              },
+              {
+                icon: Users,
+                title: "Ambiente Familiar",
+                desc: "Grupos pequeños que permiten atención personalizada a cada alumno.",
+              },
+              {
+                icon: Calendar,
+                title: "Actividades Especiales",
+                desc: "Competencias de Debate, Actos Musicales y Excursiones que enriquecen el aprendizaje.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-t-4 border-green-600 transform hover:scale-105 transition-transform duration-300"
+              >
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 text-center">
+                  {item.title}
+                </h3>
+                <p className="text-center text-sm sm:text-base">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-notebook-paper py-8 sm:py-16 relative">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-green-800 mb-6 sm:mb-8 text-center">
+              Nuestras Instalaciones
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+              {[
+                {
+                  title: "Aulas Acogedoras",
+                  desc: "Espacios luminosos y cómodos para nuestros pequeños estudiantes.",
+                  type: "Aulas",
+                  image: "/images/Aulas1.jpg", // Ruta de la imagen para Aulas
+                },
+                {
+                  title: "Áreas Verdes",
+                  desc: "Amplios espacios al aire libre para jugar y conectar con la naturaleza.",
+                  type: "Areas",
+                  image: "/images/Areas1.jpg", // Ruta de la imagen para Areas
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleCardClick(item.type)}
+                  className="bg-white p-4 sm:p-6 rounded-lg shadow-md transform -rotate-1 hover:rotate-0 transition-transform duration-300 cursor-pointer"
+                >
+                  <div className="relative h-40 sm:h-48 mb-4 overflow-hidden rounded">
+                    <Image
+                      src={item.image} // Usa la ruta de la imagen correcta
+                      alt={item.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded"
+                    />
+                    <div className="absolute inset-0 border-4 border-white rounded"></div>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm sm:text-base">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="absolute top-0 left-0 w-full h-4 bg-red-500"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-300"></div>
+        </section>
+
+        {isCarouselVisible && (
+          <Carousel
+            images={images}
+            onClose={() => setIsCarouselVisible(false)}
+          />
+        )}
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
+
+      <style jsx global>{`
+        @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+        :root {
+          --color-green-primary: #15803d;
+          --color-cream-paper: #fdf6e3;
+          --color-notebook-paper: #f8f8f8;
+        }
+
+        body {
+          font-family: "Architects Daughter", cursive;
+        }
+
+        .bg-green-primary {
+          background-color: var(--color-green-primary);
+        }
+
+        .bg-cream-paper {
+          background-color: var(--color-cream-paper);
+        }
+
+        .bg-notebook-paper {
+          background-color: var(--color-notebook-paper);
+          background-image: linear-gradient(#e5e5e5 1px, transparent 1px);
+          background-size: 100% 2rem;
+        }
+
+        .text-green-primary {
+          color: var(--color-green-primary);
+        }
+
+        .shadow-text {
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+      `}</style>
     </div>
   );
 }
