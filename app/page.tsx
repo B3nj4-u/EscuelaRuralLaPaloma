@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import Head from "next/head";
+import WaveSvg from "./components/WaveSvg"; // Ajusta la ruta según tu estructura de carpetas
 
 const architectsDaughter = Architects_Daughter({
   subsets: ["latin"],
@@ -31,7 +32,10 @@ export default function Home() {
     <div className="min-h-screen bg-cream-paper text-green-900 font-handwritten">
       <Head>
         <title>Escuela Rural La Paloma</title>
-        <meta name="description" content="Sitio web informativo de Escuela Rural La Paloma" />
+        <meta
+          name="description"
+          content="Sitio web informativo de Escuela Rural La Paloma"
+        />
         <link rel="icon" href="/favicon.ico" />{" "}
         {/* Asegúrate de que la ruta sea correcta */}
       </Head>
@@ -66,22 +70,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <svg
-              viewBox="0 0 1440 320"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute bottom-0 w-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M0 320L48 304C96 288 192 256 288 229.3C384 203 480 181 576 181.3C672 181 768 203 864 213.3C960 224 1056 224 1152 213.3C1248 203 1344 181 1392 170.7L1440 160V320H1392C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320H0Z"
-                fill="rgba(34, 197, 94, 0.8)"
-              />
-              <path
-                d="M0 320L48 304C96 288 192 256 288 245.3C384 235 480 245 576 240C672 235 768 213 864 218.7C960 224 1056 256 1152 261.3C1248 267 1344 245 1392 234.7L1440 224V320H1392C1344 320 1248 320 1152 320C1056 320 960 320 864 320C768 320 672 320 576 320C480 320 384 320 288 320C192 320 96 320 48 320H0Z"
-                fill="rgba(34, 197, 94, 0.6)"
-              />
-            </svg>
+            <WaveSvg />
           </div>
         </section>
 
@@ -90,10 +79,10 @@ export default function Home() {
             Nuestra Escuela
           </h2>
           <p className="text-lg sm:text-xl mb-8 sm:mb-12 max-w-3xl mx-auto text-center leading-relaxed">
-            En la Escuela Rural La Paloma, creemos en el poder de la educaci&oacute;n
-            para transformar vidas. Rodeados de naturaleza y con un equipo
-            docente comprometido, nuestros alumnos crecen, aprenden y se
-            desarrollan en un ambiente acogedor y familiar.
+            En la Escuela Rural La Paloma, creemos en el poder de la
+            educaci&oacute;n para transformar vidas. Rodeados de naturaleza y
+            con un equipo docente comprometido, nuestros alumnos crecen,
+            aprenden y se desarrollan en un ambiente acogedor y familiar.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[

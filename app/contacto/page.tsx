@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Cloud, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Architects_Daughter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import WaveSvg from "../components/WaveSvg";
 
 const architectsDaughter = Architects_Daughter({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ export default function Contacto() {
       <Header currentPage="contacto" />
 
       <main>
-        <section className="relative h-[40vh] sm:h-[50vh] overflow-hidden">
+        <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[67vh] overflow-hidden">
           <Image
             src="/images/bannerContacto.png"
             alt="Contáctanos"
@@ -32,18 +33,16 @@ export default function Contacto() {
               Contáctanos
             </h2>
           </div>
-          <div className="absolute top-0 left-0 w-full flex justify-between items-start p-4 sm:p-6 md:p-8">
-            <Cloud className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 text-white animate-bounce" />
-            <Cloud className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white animate-bounce delay-150" />
-          </div>
+          <WaveSvg />
         </section>
 
         <section className="container mx-auto px-4 py-8 sm:py-12">
           <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl mb-6 text-center leading-relaxed">
-              Estamos aqu&iacute; para responder a todas tus preguntas. No dudes en
-              ponerte en contacto con nosotros para obtener m&aacute;s informaci&oacute;n
-              sobre nuestra escuela o para programar una visita.
+              Estamos aqu&iacute; para responder a todas tus preguntas. No dudes
+              en ponerte en contacto con nosotros para obtener m&aacute;s
+              informaci&oacute;n sobre nuestra escuela o para programar una
+              visita.
             </p>
           </div>
         </section>
@@ -58,7 +57,9 @@ export default function Contacto() {
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <MapPin className="w-6 h-6 mr-2 text-green-600" />
-                    <span>Pasaje Ricardo Garc&iacute;a, Puerto Montt, Los Lagos</span>
+                    <span>
+                      Pasaje Ricardo Garc&iacute;a, Puerto Montt, Los Lagos
+                    </span>
                   </li>
                   <li className="flex items-center">
                     <Phone className="w-6 h-6 mr-2 text-green-600" />

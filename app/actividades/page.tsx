@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  Cloud,
   MessageSquare,
   Sprout,
   Music,
@@ -13,6 +12,7 @@ import {
 import { Architects_Daughter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import WaveSvg from "../components/WaveSvg";
 
 const architectsDaughter = Architects_Daughter({
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export default function Actividades() {
       <Header currentPage="actividades" />
 
       <main>
-        <section className="relative h-[40vh] sm:h-[50vh] overflow-hidden">
+        <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[67vh] overflow-hidden">
           <Image
             src="/images/bannerActividades.png"
             alt="Actividades Escolares"
@@ -39,11 +39,8 @@ export default function Actividades() {
             >
               Nuestras Actividades
             </h2>
-          </div>
-          <div className="absolute top-0 left-0 w-full flex justify-between items-start p-4 sm:p-6 md:p-8">
-            <Cloud className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 text-white animate-bounce" />
-            <Cloud className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white animate-bounce delay-150" />
-          </div>
+          </div>  
+          <WaveSvg />
         </section>
 
         <section className="container mx-auto px-4 py-8 sm:py-12">

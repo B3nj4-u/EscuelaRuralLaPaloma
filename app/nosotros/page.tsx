@@ -1,15 +1,16 @@
-'use client'
+"use client";
 
-import Image from "next/image"
-import { Cloud, Users, GraduationCap, Heart, Leaf, Book, Smile } from "lucide-react"
-import { Architects_Daughter } from "next/font/google"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import Image from "next/image";
+import { Users, GraduationCap, Heart, Leaf, Book, Smile } from "lucide-react";
+import { Architects_Daughter } from "next/font/google";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import WaveSvg from "../components/WaveSvg";
 
 const architectsDaughter = Architects_Daughter({
   subsets: ["latin"],
   weight: "400",
-})
+});
 
 export default function Nosotros() {
   return (
@@ -17,7 +18,7 @@ export default function Nosotros() {
       <Header currentPage="nosotros" />
 
       <main>
-        <section className="relative h-[40vh] sm:h-[50vh] overflow-hidden">
+        <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[67vh] overflow-hidden">
           <Image
             src="/images/bannerNosotros.png"
             alt="Nuestra Escuela"
@@ -32,39 +33,39 @@ export default function Nosotros() {
               Nuestra Historia
             </h2>
           </div>
-          <div className="absolute top-0 left-0 w-full flex justify-between items-start p-4 sm:p-6 md:p-8">
-            <Cloud className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 text-white animate-bounce" />
-            <Cloud className="w-6 h-6 sm:w-8 sm:h-8 md:w-12 md:h-12 text-white animate-bounce delay-150" />
-          </div>
+          <WaveSvg />
         </section>
 
         <section className="container mx-auto px-4 py-8 sm:py-12">
           <div className="max-w-3xl mx-auto">
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
               La Escuela Rural La Paloma, situada en Puerto Montt, fue fundada
-              el 24 de mayo de 1959 en el sector Alto La Paloma, espec&iacute;ficamente
-              en la calle Ricardo Garc&iacute;a S/N. En sus inicios, contaba con 90
-              alumnos y un equipo educativo compuesto por una directora, ocho
-              profesores, un profesor de educaci&oacute;n diferencial, una asistente
-              social, una psic&oacute;loga, un t&eacute;cnico en p&aacute;rvulos, un t&eacute;cnico en
-              computaci&oacute;n, as&iacute; como dos auxiliares y dos manipuladoras de
-              alimentos.
+              el 24 de mayo de 1959 en el sector Alto La Paloma,
+              espec&iacute;ficamente en la calle Ricardo Garc&iacute;a S/N. En
+              sus inicios, contaba con 90 alumnos y un equipo educativo
+              compuesto por una directora, ocho profesores, un profesor de
+              educaci&oacute;n diferencial, una asistente social, una
+              psic&oacute;loga, un t&eacute;cnico en p&aacute;rvulos, un
+              t&eacute;cnico en computaci&oacute;n, as&iacute; como dos
+              auxiliares y dos manipuladoras de alimentos.
             </p>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
-              En 2009, se implement&oacute; la Jornada Escolar Completa (JEC) para la
-              educaci&oacute;n b&aacute;sica, y en 2014 se estableci&oacute; el Proyecto de
-              Integraci&oacute;n Escolar (PIE). En la actualidad, la Escuela Rural La
-              Paloma atiende a alrededor de 104 estudiantes, distribuidos en 10
-              cursos que abarcan desde Pre-K&iacute;nder hasta Octavo año b&aacute;sico. Los
-              cursos se organizan en combinaciones: Pre-K&iacute;nder-K&iacute;nder, 1º-2º,
-              3º-4º y 5º-6º.
+              En 2009, se implement&oacute; la Jornada Escolar Completa (JEC)
+              para la educaci&oacute;n b&aacute;sica, y en 2014 se
+              estableci&oacute; el Proyecto de Integraci&oacute;n Escolar (PIE).
+              En la actualidad, la Escuela Rural La Paloma atiende a alrededor
+              de 104 estudiantes, distribuidos en 10 cursos que abarcan desde
+              Pre-K&iacute;nder hasta Octavo año b&aacute;sico. Los cursos se
+              organizan en combinaciones: Pre-K&iacute;nder-K&iacute;nder,
+              1º-2º, 3º-4º y 5º-6º.
             </p>
             <p className="text-lg sm:text-xl mb-6 leading-relaxed">
-              Desde 2017, el Proyecto de Integraci&oacute;n Escolar (PIE) cuenta con un
-              equipo multidisciplinario que incluye a profesionales y
+              Desde 2017, el Proyecto de Integraci&oacute;n Escolar (PIE) cuenta
+              con un equipo multidisciplinario que incluye a profesionales y
               asistentes, tales como Educadora Diferencial, Psicopedagoga,
-              Psic&oacute;loga, Fonoaudi&oacute;loga y Terapeuta Ocupacional, enriqueciendo
-              as&iacute; la atenci&oacute;n y el desarrollo integral de nuestros alumnos.
+              Psic&oacute;loga, Fonoaudi&oacute;loga y Terapeuta Ocupacional,
+              enriqueciendo as&iacute; la atenci&oacute;n y el desarrollo
+              integral de nuestros alumnos.
             </p>
           </div>
         </section>
@@ -159,13 +160,28 @@ export default function Nosotros() {
                 Visión
               </h3>
               <p className="text-lg sm:text-xl mb-8 leading-relaxed">
-                Ser un referente en nuestra comunidad educativa, formando estudiantes íntegros y autónomos; promoviendo la cultura, lectura, escritura, vida sustentable y cuidado del medio ambiente, a través de una formación inclusiva, desarrollando habilidades y competencias, que favorezca la creatividad, estilos de aprendizaje y cuidado de la naturaleza, en un entorno de respeto, equidad, tolerancia y solidaridad, donde estos den evidencia de ser personas capaces de desarrollarse en la sociedad actual.
+                Ser un referente en nuestra comunidad educativa, formando
+                estudiantes íntegros y autónomos; promoviendo la cultura,
+                lectura, escritura, vida sustentable y cuidado del medio
+                ambiente, a través de una formación inclusiva, desarrollando
+                habilidades y competencias, que favorezca la creatividad,
+                estilos de aprendizaje y cuidado de la naturaleza, en un entorno
+                de respeto, equidad, tolerancia y solidaridad, donde estos den
+                evidencia de ser personas capaces de desarrollarse en la
+                sociedad actual.
               </p>
               <h3 className="text-2xl sm:text-3xl font-semibold text-green-800 mb-6 text-center">
                 Misión
               </h3>
               <p className="text-lg sm:text-xl mb-8 leading-relaxed">
-                Ser una escuela inclusiva, conscientes del buen uso y cuidado de los recursos naturales y tecnológicos, formando estudiantes autónomos que desarrollen sus habilidades y competencias, promocionando: el interés por la lectura, escritura y la conciencia multicultural en general, desde la educación pre-básica a 8º básico, y el cuidado del medio ambiente, sobre la base de sus propias experiencias, incentivando su inserción en el mundo académico, social y laboral.
+                Ser una escuela inclusiva, conscientes del buen uso y cuidado de
+                los recursos naturales y tecnológicos, formando estudiantes
+                autónomos que desarrollen sus habilidades y competencias,
+                promocionando: el interés por la lectura, escritura y la
+                conciencia multicultural en general, desde la educación
+                pre-básica a 8º básico, y el cuidado del medio ambiente, sobre
+                la base de sus propias experiencias, incentivando su inserción
+                en el mundo académico, social y laboral.
               </p>
             </div>
           </div>
@@ -178,9 +194,17 @@ export default function Nosotros() {
             Definiciones y Sentidos Institucionales
           </h3>
           <div className="max-w-3xl mx-auto">
-            <h4 className="text-xl font-semibold mb-4">Inclusión e integración escolar</h4>
+            <h4 className="text-xl font-semibold mb-4">
+              Inclusión e integración escolar
+            </h4>
             <p className="text-lg sm:text-xl mb-8 leading-relaxed">
-              Educar a la persona en su totalidad, estimulando también sus habilidades emocionales, sociales y éticas. Recibir y formar estudiantes con capacidades diferentes, alumnos y alumnas con distintos ritmos y niveles de aprendizaje y vulnerabilidad social, para que sean personas respetuosas, responsables, colaboradoras y buenos ciudadanos; con valores y con habilidades para vivir esos valores en su vida cotidiana.
+              Educar a la persona en su totalidad, estimulando también sus
+              habilidades emocionales, sociales y éticas. Recibir y formar
+              estudiantes con capacidades diferentes, alumnos y alumnas con
+              distintos ritmos y niveles de aprendizaje y vulnerabilidad social,
+              para que sean personas respetuosas, responsables, colaboradoras y
+              buenos ciudadanos; con valores y con habilidades para vivir esos
+              valores en su vida cotidiana.
             </p>
           </div>
         </section>
@@ -192,16 +216,32 @@ export default function Nosotros() {
             </h3>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg sm:text-xl mb-6 leading-relaxed">
-                El valor es un principio previo que orienta y da significado a la existencia humana. Son normas e incentivos para actuar. Educar en valores exige del educador y de la comunidad educativa en su totalidad, promover valores positivos y desarraigar los negativos.
+                El valor es un principio previo que orienta y da significado a
+                la existencia humana. Son normas e incentivos para actuar.
+                Educar en valores exige del educador y de la comunidad educativa
+                en su totalidad, promover valores positivos y desarraigar los
+                negativos.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
-                  "Responsabilidad", "Respeto", "Tolerancia", "Solidaridad",
-                  "Honradez", "Libertad", "Honestidad", "Perseverancia",
-                  "Lealtad", "Convivencia", "Espíritu de superación", "Empatía",
-                  "Automotivación"
+                  "Responsabilidad",
+                  "Respeto",
+                  "Tolerancia",
+                  "Solidaridad",
+                  "Honradez",
+                  "Libertad",
+                  "Honestidad",
+                  "Perseverancia",
+                  "Lealtad",
+                  "Convivencia",
+                  "Espíritu de superación",
+                  "Empatía",
+                  "Automotivación",
                 ].map((valor, index) => (
-                  <div key={index} className="bg-white p-3 rounded-lg shadow-md flex items-center">
+                  <div
+                    key={index}
+                    className="bg-white p-3 rounded-lg shadow-md flex items-center"
+                  >
                     <Smile className="w-6 h-6 text-green-600 mr-3" />
                     <span className="font-semibold">{valor}</span>
                   </div>
@@ -252,5 +292,5 @@ export default function Nosotros() {
         }
       `}</style>
     </div>
-  )
+  );
 }
