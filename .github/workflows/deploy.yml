@@ -1,0 +1,15 @@
+name: Vercel Redeploy
+
+on:
+  workflow_dispatch:  # Permite el despliegue manual desde la interfaz de GitHub Actions
+  schedule:
+    - cron: '0 */4 * * *'  # Despliega cada 4 horas
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger redeploy on Vercel
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_Bp7E4sRaQg2rRslDgJl6M1KNCoWj/AQpUy7jFpd"

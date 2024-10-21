@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+
+.container {
+  font-family: "Architects Daughter", cursive;
+}
+
+.bgGreenPrimary {
+  background-color: var(--color-green-primary);
+}
+
+.bgCreamPaper {
+  background-color: var(--color-cream-paper);
+}
+
+.bgNotebookPaper {
+  background-color: var(--color-notebook-paper);
+  background-image: linear-gradient(#e5e5e5 1px, transparent 1px);
+  background-size: 100% 2rem;
+}
+
+.textGreenPrimary {
+  color: var(--color-green-primary);
+}
+
+.shadowText {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
