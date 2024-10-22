@@ -54,7 +54,7 @@ export default function Actividades() {
       <main>
         <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[67vh] overflow-hidden">
           <Image
-            src="/images/bannerActividades.png"
+            src="/images/bannerActividades.jpeg"
             alt="Actividades Escolares"
             fill
             style={{ objectFit: "cover" }}

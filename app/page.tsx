@@ -43,7 +43,7 @@ export default function Home() {
       <main>
         <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
           <Image
-            src="/images/banner.png"
+            src="/images/banner.jpeg"
             alt="Escuela Rural La Paloma"
             fill // Cambia 'layout="fill"' por 'fill'
             style={{ objectFit: "cover" }} // Usa 'style' para definir 'objectFit'

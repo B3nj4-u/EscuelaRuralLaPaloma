@@ -20,7 +20,7 @@ export default function Contacto() {
       <main>
         <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[67vh] overflow-hidden">
           <Image
-            src="/images/bannerContacto.png"
+            src="/images/bannerContacto.jpeg"
             alt="Contáctanos"
             fill // Cambia 'layout="fill"' por 'fill'
             style={{ objectFit: "cover" }} // Usa 'style' para definir 'objectFit'
